@@ -3,6 +3,7 @@
  display: inline;
 }
 
+
 #banner {
 	background: #9c9;
 	padding-top: 10px;
@@ -116,6 +117,19 @@
 #store  .title {
   font-size: 120%;
   font-family: sans-serif;
+}
+
+#store .cart_title{
+	font: 120% bold;
+}
+
+#store .item_price, #store .total_line{
+	text-align: right;
+}
+
+#store .total_line .total_cell{
+	font-weight:bold;
+	border-top:1px solid #595;
 }
 
 #store .entry img {
