@@ -1,4 +1,17 @@
 /* Global styles */
+
+#cart, #cart table{
+	font-size: smaller;
+	color:	white;
+}
+
+#cart table{
+	border-top: 1px dotted #595;
+	border-bottom: 1px dotted #595;
+	margin-bottom: 10px;
+}
+
+
 #store .entry form, #store .entry form div {
  display: inline;
 }

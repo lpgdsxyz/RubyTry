@@ -19,6 +19,13 @@
 	
 	<div id="column">
 		<div id="side">
+			
+			<% if @cart%>   
+				<div id="cart">
+					<%= render(@cart) %>
+				</div>
+			<% end %>
+			
 			<a href="http://www...">Home</a><br/>
 			<a href="http://www.../fag">Questions</a><br/>
 			<a href="http://www.../news">News</a><br/>
