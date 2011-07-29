@@ -4,7 +4,7 @@ class NotifierTest < ActionMailer::TestCase
   test "order_received(order)" do
     mail = Notifier.order_received(orders(:one))
 	
-    assert_equal "Pragmatic Store Order Configuration", mail.subject
+    assert_equal "Pragmatic Store Order Confirmation", mail.subject
     #assert_equal :order.email, mail.to
     #assert_equal ["from@example.com"], mail.from
     #assert_match "Hi", mail.body.encoded
