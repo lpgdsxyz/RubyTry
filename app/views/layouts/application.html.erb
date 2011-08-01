@@ -12,11 +12,21 @@
 </head>
 <!-- END:head -->
 <body>
+	
+	
 	<div id="banner">
 		<%= image_tag("logo.png") %>
-		<%= @page_title || "Pragmatic BookShelf" %>
+		<%= @page_title || t('.title') %>
+		
+		<%= form_tag store_path, :class=>'locale' do %>
+			<%= select_tag 'set_locale',
+				options_for_select(LANGUAGES, I18n.locale.to_s),
+				:onchange => 'this.form.submit()'
+			%>
+			<%= javascript_tag "$$('.locale input').each(Elemetn.hide)" %>
+		<% end %>
 	</div>
-	
+
 	<div id="column">
 		<div id="side">
 			
@@ -26,10 +36,10 @@
 				</div>
 			<% end %>
 			
-			<a href="http://www...">Home</a><br/>
-			<a href="http://www.../fag">Questions</a><br/>
-			<a href="http://www.../news">News</a><br/>
-			<a href="http://www.../contact">Contact</a><br/>
+			<a href="http://www..."><%= t('.home') %></a><br/>
+			<a href="http://www.../fag"><%= t('.questions') %></a><br/>
+			<a href="http://www.../news"><%= t('.news') %></a><br/>
+			<a href="http://www.../contact"><%= t('.contact') %></a><br/>
 			
 			<% if session[:user_id] %>
 				<br/>
